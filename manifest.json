@@ -1,0 +1,29 @@
+{
+
+  "manifest_version": 2,
+  "name": "randomReddit",
+  "version": "1.0",
+
+  "description": "Brings you to a random subreddit.",
+  "homepage_url": "https://github.com/melodievideau/randomReddit-Mozilla",
+
+  "icons": {
+    "48": "icons/redditicon.jpeg",
+  },
+  
+  "permission": [
+  	"activeTab"
+  ]
+  
+  "browser_action": {
+  	"default_icon": "icons/redditicon.jpeg",
+  	"default_title": "Random Reddit",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["borderify.js"]
+    }
+  ]
+
+}
