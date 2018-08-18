@@ -1,29 +1,19 @@
 {
 
+  "description": "Brings you to a random subreddit",
   "manifest_version": 2,
-  "name": "randomReddit",
+  "name": "random Reddit",
   "version": "1.0",
 
-  "description": "Brings you to a random subreddit.",
-  "homepage_url": "https://github.com/melodievideau/randomReddit-Mozilla",
-
-  "icons": {
-    "48": "icons/redditicon.jpeg",
+  "background": {
+    "scripts": ["randomreddit.js"]
   },
-  
-  "permission": [
-  	"activeTab"
-  ]
-  
+ 
   "browser_action": {
-  	"default_icon": "icons/redditicon.jpeg",
-  	"default_title": "Random Reddit",
-
-  "content_scripts": [
-    {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+    "default_icon": {
+      "16": "icons/cool-16.png",
+      "32": "icons/cool-32.png"
     }
-  ]
+  }
 
 }
